@@ -1,0 +1,18 @@
+{
+  "name": "relentless-tryer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ytkalan/relentless-tryer.git",
+  "author": "ytkalan <atomyuen95@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chromedriver": "^74.0.0",
+    "dotenv": "^8.0.0",
+    "node-notifier": "^5.4.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "bombard": "start yarn start & start yarn start"
+  }
+}
