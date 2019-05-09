@@ -18,14 +18,14 @@ const customFunction = () => {
 const reconnect = (count = 1) => {
   driver
     .get(process.env.url)
-    .then(async() => {
+    .then(() => {
       console.log(`Attempt: ${count}`);
-      await driver
+      driver
         .findElement(By.xpath(process.env.img_xpath))
         .then(() => {
           notifier.notify({ title: 'Connected!', message: `Successful after ${count} attempts`});
           customFunction();
-          return Promise.resolve()
+          return Promise.resolve();
         })
         .catch(() => (setTimeout(() => reconnect(count + 1), 50)));
     });
